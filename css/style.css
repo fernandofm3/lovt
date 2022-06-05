@@ -1,23 +1,22 @@
-/*Resetando as configurações padrão*/
+/*Resetando as configurações padrão de estilização*/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;    
 }
 
+
+
+/*** Difinindo a fonte padrão do site ***/
 body {
     font-family: 'Rajdhani', sans-serif;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;    
-}
 
 
 /*** Estilo para Header ***/
 header{
-    margin-bottom: 28px;
+    margin-bottom: 40px;
 }
 
 header nav {
@@ -29,8 +28,8 @@ header nav {
     box-shadow: 0 0 1em #999;
 }
 
-header>nav>a {
-    text-decoration: none;
+header nav .link-logo-nav {
+    text-decoration: none;    
 }
 
 header>nav>a .div-logo {
@@ -54,7 +53,14 @@ header>nav>.botao-nav img {
 }
 
 
+
 /*** Estilo para conteúdo principal ***/ 
+
+.container {
+    max-width: 900px;
+    margin: auto;    
+}
+
 main .carrossel {
     width: 100%;
     position: relative;        
@@ -68,8 +74,7 @@ main .carrossel a .img-seta-esquerda {
     position: absolute;
     top: 35%;
     left: 0;
-    margin-left: 20px;
-    /*width: 15px;*/
+    margin-left: 20px;    
     background-color: rgba(124, 124, 124, 0.6);
     padding: 20px;
     padding-left: 25px;
@@ -81,8 +86,7 @@ main .carrossel a .img-seta-direita {
     position: absolute;
     top: 35%;
     right: 0;   
-    margin-right: 20px;
-    /*width: 15px;*/
+    margin-right: 20px;    
     background-color: rgba(124, 124, 124, 0.6);
     padding: 20px;
     padding-left: 25px;
@@ -90,9 +94,7 @@ main .carrossel a .img-seta-direita {
     border-radius: 50%;
 }
 
-main .vendas {
-    /*display: flex;
-    justify-content: space-between;*/
+main .vendas {    
     margin: 0 20px;
     margin-bottom: 50px;
 }
@@ -112,7 +114,6 @@ main .vendas .card figure img {
 main .vendas .card article{
     background-color: #EEEEEE;
     padding: 10px;
-
 }
 
 main .vendas .card article div{
@@ -186,19 +187,21 @@ main .estilo-casa div div{
 }
 
 
+
 /*** Estilo para rodapé ***/
 footer {
     background-color: #333;    
 }
 
-footer .container-footer .div-localizacao {    
-    padding: 50px 30px 20px 30px;
+footer .container-footer .div-localizacao {      
     width: 100%;
-       
+    padding: 50px 30px 20px 30px;
 }
 
-footer .container-footer .div-localizacao img {    
-    width: 100%;    
+footer .container-footer .div-localizacao iframe {    
+    width: 100%;
+    border-radius: 30px;
+    height: 300px;    
 }
 
 footer .container-footer .div-contatos {   
@@ -218,16 +221,18 @@ footer .container-footer .div-contatos .div-midias-sociais {
     margin-top: 15px;    
 }
 
-footer .container-footer .div-contatos .div-midias-sociais ul li{
+footer .container-footer .div-contatos .div-midias-sociais ul li {
     display: inline-block;    
     margin-right: 20px;    
 }
 
-footer .container-footer .div-contatos .div-midias-sociais ul li img{
+footer .container-footer .div-contatos .div-midias-sociais ul li a img{
     width: 25px;
 }
 
 
+
+/****************** @media - Media queries **************************************/
 
 /*** Responsividade para Tablets ***/
 @media (min-width: 480px){
@@ -243,9 +248,13 @@ footer .container-footer .div-contatos .div-midias-sociais ul li img{
     main .estilo-casa div div {       
         font-size: 1.5rem;        
     }
+
+    footer .container-footer .div-localizacao iframe {       
+        height: 450px;    
+    }
 }
 
-/*** Leptops, Tablets maiores (paisagem) e Desktop menores ***/
+/*** Responsividade para Leptops, Tablets maiores (paisagem) e Desktop menores ***/
 @media (min-width: 769px){
     main .estilo-casa div div {       
         font-size: 1.7rem;        
@@ -279,6 +288,15 @@ footer .container-footer .div-contatos .div-midias-sociais ul li img{
 }
 
 @media (min-width: 940px){
+    header nav .link-logo-nav {
+        text-decoration: none;
+        margin-left: 30px;
+    }
+
+    header nav .botao-nav {    
+        margin-right: 30px;
+    }
+
     main .vendas {
        margin: 0;
        margin-bottom: 50px;
