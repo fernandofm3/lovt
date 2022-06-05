@@ -191,37 +191,39 @@ footer {
     background-color: #333;    
 }
 
-footer .div-localizacao {    
+footer .container-footer .div-localizacao {    
     padding: 50px 30px 20px 30px;
+    width: 100%;
        
 }
 
-footer .div-localizacao img {    
+footer .container-footer .div-localizacao img {    
     width: 100%;    
 }
 
-footer .div-contatos {   
+footer .container-footer .div-contatos {   
     padding: 20px 30px 50px 30px;
+    width: 100%;
 }
 
-footer .div-contatos p {
+footer .container-footer .div-contatos p {
     color: white;
-    font-size: 0.75rem;
-    line-height: 30px;
+    font-size: 0.8rem;
+    line-height: 30px;   
 }
 
-footer .div-contatos .div-midias-sociais {
+footer .container-footer .div-contatos .div-midias-sociais {
     color: white;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     margin-top: 15px;    
 }
 
-footer .div-contatos .div-midias-sociais ul li{
+footer .container-footer .div-contatos .div-midias-sociais ul li{
     display: inline-block;    
     margin-right: 20px;    
 }
 
-footer .div-contatos .div-midias-sociais ul li img{
+footer .container-footer .div-contatos .div-midias-sociais ul li img{
     width: 25px;
 }
 
@@ -234,10 +236,58 @@ footer .div-contatos .div-midias-sociais ul li img{
         justify-content: space-between;       
     }
 
-    main .vendas .card {    
-        margin-top: 40px;
-        max-width: 210px;
+    main .vendas .card {        
+        max-width: 45%;
     }
+
+    main .estilo-casa div div {       
+        font-size: 1.5rem;        
+    }
+}
+
+/*** Leptops, Tablets maiores (paisagem) e Desktop menores ***/
+@media (min-width: 769px){
+    main .estilo-casa div div {       
+        font-size: 1.7rem;        
+    }
+
+    footer .container-footer {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 35px;
+    }
+
+    footer .container-footer .div-localizacao {
+        padding: 50px 30px 20px 30px;        
+    }
+
+    footer .container-footer .div-contatos {
+        padding: 50px 30px 20px 30px;
+        width: 50%;
+    }   
+}
+
+@media (min-width: 900px){
+    footer .container-footer {
+        max-width: 900px;
+        margin: auto;    
+    }
+    
+    footer .container-footer .div-contatos {        
+        width: 40%;
+    }   
+}
+
+@media (min-width: 940px){
+    main .vendas {
+       margin: 0;
+       margin-bottom: 50px;
+    }
+    
+    main .estilo-casa {
+        margin: 0;
+        margin-bottom: 50px;
+    }    
 }
 
 
