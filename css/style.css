@@ -1,0 +1,246 @@
+/*Resetando as configurações padrão*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;    
+}
+
+
+/*** Estilo para Header ***/
+header{
+    margin-bottom: 28px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;    
+    box-shadow: 0 0 1em #999;
+}
+
+header>nav>a {
+    text-decoration: none;
+}
+
+header>nav>a .div-logo {
+    display: flex;
+}
+
+header>nav>a>.div-logo>figure .logo {
+    width: 80px;
+}
+
+header>nav>a>.div-logo h2 {
+    margin-left: 5px;
+    margin-top: 1px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaa
+}
+
+header>nav>.botao-nav img {    
+    width: 25px;
+}
+
+
+/*** Estilo para conteúdo principal ***/ 
+main .carrossel {
+    width: 100%;
+    position: relative;        
+}
+
+main .carrossel figure .img-principal-carrossel {
+    width: 100%;     
+}
+
+main .carrossel a .img-seta-esquerda {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    margin-left: 20px;
+    /*width: 15px;*/
+    background-color: rgba(124, 124, 124, 0.6);
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 50%;
+}
+
+main .carrossel a .img-seta-direita {
+    position: absolute;
+    top: 35%;
+    right: 0;   
+    margin-right: 20px;
+    /*width: 15px;*/
+    background-color: rgba(124, 124, 124, 0.6);
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 50%;
+}
+
+main .vendas {
+    /*display: flex;
+    justify-content: space-between;*/
+    margin: 0 20px;
+    margin-bottom: 50px;
+}
+
+main .vendas .card {    
+    margin-top: 40px;
+}
+
+main .vendas .card figure {
+    margin-bottom: -4px;    
+}
+
+main .vendas .card figure img {
+    width: 100%;    
+}
+
+main .vendas .card article{
+    background-color: #EEEEEE;
+    padding: 10px;
+
+}
+
+main .vendas .card article div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+main .vendas .card article div .card-preco {
+   color: #888;
+   font-size: 1.3rem;
+}
+
+main .vendas .card article div .card-status {    
+    color: #fff;
+    border-radius: 20px;
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+ }
+
+main .vendas .card article p {    
+    font-size: 0.8rem;
+    color: #555;
+    text-align: justify;
+ }
+
+ .card-new-home {
+    background-color: #51D275;
+ }
+
+ .card-sale-home {
+    background-color: #DC9730;
+ }
+
+main .estilo-casa {
+    margin: 0 20px;
+    margin-bottom: 50px;
+}
+
+main .estilo-casa h2 {
+    font-size: 1.8rem;
+    color: #888;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+main .estilo-casa div {
+    margin-bottom: 10px;
+}
+
+main .estilo-casa div {
+    width: 100%;
+    position: relative;
+    text-emphasis: center;
+}
+
+main .estilo-casa div figure img{
+    width: 100%;
+    opacity: 0.7;    
+}
+
+main .estilo-casa div div{
+    position: absolute;
+    top: 33%;        
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+
+/*** Estilo para rodapé ***/
+footer {
+    background-color: #333;    
+}
+
+footer .div-localizacao {    
+    padding: 50px 30px 20px 30px;
+       
+}
+
+footer .div-localizacao img {    
+    width: 100%;    
+}
+
+footer .div-contatos {   
+    padding: 20px 30px 50px 30px;
+}
+
+footer .div-contatos p {
+    color: white;
+    font-size: 0.75rem;
+    line-height: 30px;
+}
+
+footer .div-contatos .div-midias-sociais {
+    color: white;
+    font-size: 0.75rem;
+    margin-top: 15px;    
+}
+
+footer .div-contatos .div-midias-sociais ul li{
+    display: inline-block;    
+    margin-right: 20px;    
+}
+
+footer .div-contatos .div-midias-sociais ul li img{
+    width: 25px;
+}
+
+
+
+/*** Responsividade para Tablets ***/
+@media (min-width: 480px){
+    main .vendas {
+        display: flex;
+        justify-content: space-between;       
+    }
+
+    main .vendas .card {    
+        margin-top: 40px;
+        max-width: 210px;
+    }
+}
+
+
+
+
+
