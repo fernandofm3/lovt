@@ -48,8 +48,12 @@ header>nav>a>.div-logo h2 {
     color: #aaa
 }
 
+header nav .lista-menu-nav{
+    display: none;
+}
+
 header>nav>.botao-nav img {    
-    width: 25px;
+    width: 25px;    
 }
 
 
@@ -256,6 +260,34 @@ footer .container-footer .div-contatos .div-midias-sociais ul li a img{
 
 /*** Responsividade para Leptops, Tablets maiores (paisagem) e Desktop menores ***/
 @media (min-width: 769px){
+    header nav {
+        justify-content: left;
+    }
+
+    header>nav>.botao-nav {    
+        display: none;    
+    }
+
+    header nav .lista-menu-nav{
+        display: block;
+        margin-left: 60px;        
+    }
+
+    header nav .lista-menu-nav li {
+        display: inline-block;    
+        margin-right: 20px;        
+    }
+
+    header nav .lista-menu-nav li a{        
+        text-decoration: none;
+        color: #999;
+        transition: 0.3s;
+    }
+
+    header nav .lista-menu-nav li a:hover {
+        color: #333;
+    }
+
     main .estilo-casa div div {       
         font-size: 1.7rem;        
     }
