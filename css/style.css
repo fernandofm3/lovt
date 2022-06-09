@@ -17,42 +17,42 @@ body {
 /*** Estilo para Header ***/
 header{
     margin-bottom: 40px;
+    box-shadow: 0 0 1em #999;
 }
 
-header nav {
+header .container nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px;    
-    box-shadow: 0 0 1em #999;
 }
 
-header nav .link-logo-nav {
+header .container nav .link-logo-nav {
     text-decoration: none;    
 }
 
-header>nav>a .div-logo {
+header .container nav a .div-logo {
     display: flex;
 }
 
-header>nav>a>.div-logo>figure .logo {
+header .container nav a .div-logo figure .logo {
     width: 80px;
 }
 
-header>nav>a>.div-logo h2 {
+header .container nav a .div-logo h2 {
     margin-left: 5px;
     margin-top: 1px;
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: 400;
     color: #aaa
 }
 
-header nav .lista-menu-nav{
+header .container nav .lista-menu-nav{
     display: none;
 }
 
-header>nav>.botao-nav img {    
+header .container nav .botao-nav img {    
     width: 25px;    
 }
 
@@ -65,9 +65,9 @@ header>nav>.botao-nav img {
     margin: auto;    
 }
 
-main .carrossel {
-    width: 100%;
-    position: relative;        
+main .carrossel {    
+    position: relative;
+    margin: 0 20px;        
 }
 
 main .carrossel figure .img-principal-carrossel {
@@ -185,7 +185,7 @@ main .estilo-casa div div{
     position: absolute;
     top: 33%;        
     color: #fff;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
     text-shadow: 0.1em 0.1em 0.2em black;
 }
@@ -259,39 +259,9 @@ footer .container-footer .div-contatos .div-midias-sociais ul li a img{
 }
 
 /*** Responsividade para Leptops, Tablets maiores (paisagem) e Desktop menores ***/
-@media (min-width: 769px){
-    header nav {
-        justify-content: left;
-    }
 
-    header>nav>.botao-nav {    
-        display: none;    
-    }
-
-    header nav .lista-menu-nav{
-        display: block;
-        margin-left: 60px;        
-    }
-
-    header nav .lista-menu-nav li {
-        display: inline-block;    
-        margin-right: 20px;        
-    }
-
-    header nav .lista-menu-nav li a{        
-        text-decoration: none;
-        color: #999;
-        transition: 0.3s;
-    }
-
-    header nav .lista-menu-nav li a:hover {
-        color: #333;
-    }
-
-    main .estilo-casa div div {       
-        font-size: 1.7rem;        
-    }
-
+/*Resolução no figma 697px*/
+@media (min-width: 696px){
     footer .container-footer {
         display: flex;
         justify-content: space-between;
@@ -302,10 +272,54 @@ footer .container-footer .div-contatos .div-midias-sociais ul li a img{
         padding: 50px 30px 20px 30px;        
     }
 
+    footer .container-footer .div-localizacao iframe {
+        width: 252px;
+        height: 163px;        
+    }
+
     footer .container-footer .div-contatos {
-        padding: 50px 30px 20px 30px;
+        padding: 50px 30px 20px 0px;
         width: 50%;
     }   
+}    
+
+@media (min-width: 769px){
+    header .container nav {
+        justify-content: left;
+    }
+
+    header .container nav .botao-nav {    
+        display: none;    
+    }
+
+    header .container nav .lista-menu-nav{
+        display: block;
+        margin-left: 60px;        
+    }
+
+    header .container nav .lista-menu-nav li {
+        display: inline-block;    
+        margin-right: 20px;        
+    }
+
+    header .container nav .lista-menu-nav li a{        
+        text-decoration: none;
+        color: #999;
+        transition: 0.3s;
+    }
+
+    header .container nav .lista-menu-nav li a:hover {
+        color: #333;
+    }
+
+    main .estilo-casa div div {       
+        font-size: 1.7rem;        
+    }
+
+    footer .container-footer .div-localizacao iframe {
+        width: 100%;
+        height: 450px;        
+    }    
 }
 
 @media (min-width: 900px){
@@ -320,13 +334,21 @@ footer .container-footer .div-contatos .div-midias-sociais ul li a img{
 }
 
 @media (min-width: 940px){
-    header nav .link-logo-nav {
-        text-decoration: none;
-        margin-left: 30px;
+
+    header .container nav {
+        padding-left: 0;
     }
 
-    header nav .botao-nav {    
+    header .container nav .link-logo-nav {
+        text-decoration: none;        
+    }
+
+    header .container nav .botao-nav {    
         margin-right: 30px;
+    }
+
+    main .carrossel {
+        margin: 0 0;
     }
 
     main .vendas {
@@ -337,7 +359,11 @@ footer .container-footer .div-contatos .div-midias-sociais ul li a img{
     main .estilo-casa {
         margin: 0;
         margin-bottom: 50px;
-    }    
+    }
+    
+    footer .container-footer .div-localizacao {
+        padding: 50px 30px 20px 0px;
+    }
 }
 
 
